@@ -1,4 +1,7 @@
-//JavaScript Random Quote Generator
+/*
+  JavaScript Random Quote Generator
+  script.js
+*/
 
 // create quotes array
 var quotes = [
