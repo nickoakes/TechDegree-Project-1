@@ -1,7 +1,4 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
+//JavaScript Random Quote Generator
 
 // create quotes array
 var quotes = [
@@ -64,6 +61,8 @@ function getRandomQuote() {
 console.log(getRandomQuote());
 
 //print quote to HTML
+
+//generate random numbers for rgb values
   
 function printQuote() {
   var randomQuote = getRandomQuote();
@@ -71,6 +70,8 @@ function printQuote() {
   var red = Math.floor(Math.random() * 255 + 1);
   var green = Math.floor(Math.random() * 255 + 1);
   var blue = Math.floor(Math.random() * 255 + 1);
+
+//add random quote, source, citation and year to html
 
   html +=  "<p class='quote'>" + randomQuote.quote + "</p>" + "<p class='source'>" + randomQuote.source;
   if(randomQuote.citation && randomQuote.year) {
@@ -83,7 +84,10 @@ function printQuote() {
     html += "</p>"
   }
   
+  //insert quote and associated information into the DOM
   document.getElementById('quote-box').innerHTML = html;
+
+  //generate color using random rgb values created previously
   document.body.style.backgroundColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
   }
 
